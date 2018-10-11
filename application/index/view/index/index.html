@@ -1,0 +1,10 @@
+{extend name="./layout/base" /}
+{block name="title"}标题{/block}
+{block name="content"}<h1>我是子模板中的内容</h1>{$str}
+{volist name="arr" id="k"}
+{$k}<br/>
+{/volist}<br/>
+{foreach $arr as $k=>$v}
+{$k}-{$v}
+{/foreach}
+{/block}
