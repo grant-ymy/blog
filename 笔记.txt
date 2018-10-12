@@ -1,0 +1,11 @@
+命令行创建资源控制器：php think make:controller 模块/控制器名
+（创建普通空控制器时在后面加上参数--plain）
+migrate创建数据表：php think migrate:create XXX
+然后在生成的migrate类的change方法中定义表结构，
+最后执行php think migrate:run
+回滚：php think migrate:rollback
+数据填充：创建seed:php think seed:create XXX
+然后在生成的类的run方法中填充数据，最后执行php think seed:run
+模板继承：{extend name="father" /}
+        {block name="xxx" /} {/block}
+查询数据库的三种方式：模型类、Db类、db助手函数
