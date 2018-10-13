@@ -2,7 +2,7 @@
 
 use think\migration\Seeder;
 
-class UserSeed extends Seeder
+class PostSeed extends Seeder
 {
     /**
      * Run Method.
@@ -14,7 +14,6 @@ class UserSeed extends Seeder
      */
     public function run()
     {
-        db('users')->insert(['username'=>'ymy','nickname'=>'grant']);
-        db('users')->insert(['username'=>'admin','nickname'=>'admin']);
+        db('posts')->insert(['title'=>'test','content'=>'test']);
     }
 }

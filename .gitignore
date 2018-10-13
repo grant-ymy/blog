@@ -1,7 +1,9 @@
 /.idea
 /.vscode
 /vendor
+/runtime
 *.log
 thinkphp
 .env
 .DS_Store
+笔记.txt

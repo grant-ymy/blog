@@ -1,9 +1,8 @@
 <?php
 
 use think\migration\Migrator;
-use think\migration\db\Column;
 
-class User extends Migrator
+class Posts extends Migrator
 {
     /**
      * Change Method.
@@ -28,11 +27,6 @@ class User extends Migrator
      */
     public function change()
     {
-        $table=$this->table("users");
-        $table->addColumn("username","string",['default'=>'anymous','comment'=>'用户名'])
-            ->addColumn("nickname","string",['default'=>'小明同学'])
-            ->create();
-
-
+        $this->table('posts')->addColumn('title','string')->addColumn('content','string')->create();
     }
 }
